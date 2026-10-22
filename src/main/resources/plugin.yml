@@ -1,0 +1,17 @@
+name: InterAltar
+version: 1.0.0
+main: net.intertime.altar.InterAltar
+api-version: '1.16'
+author: InterTime
+description: Івент Кислотний вівтар
+commands:
+  acidaltar:
+    description: Керування івентом Кислотний вівтар
+    aliases: [altar, kislota]
+permissions:
+  interaltar.admin:
+    description: Команди /acidaltar
+    default: op
+  interaltar.use:
+    description: Ставити вівтар
+    default: true

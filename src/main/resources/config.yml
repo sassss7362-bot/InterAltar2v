@@ -1,0 +1,67 @@
+# InterAltar - Кислотний вівтар
+# Кольори: &a &l ...  HEX: &#39ff14
+
+altar:
+  build-seconds: 9            # анімація появи (5-10)
+  activation-seconds: 20      # скільки йде активація після кліку по скрині
+  open-seconds: 180           # скільки лут доступний, потім вівтар зникає
+  remove-seconds: 6           # анімація зникнення
+  ready-timeout-seconds: 900  # якщо ніхто не активував - вівтар зникає
+  min-distance: 40            # мін. відстань між вівтарями
+  max-clear-blocks: 80        # скільки твердих блоків можна зрізати при будівництві
+  bossbar-radius: 80
+  dye-step-ticks: 2           # швидкість появи зеленого барвника (менше = швидше)
+  loot-step-ticks: 3          # швидкість заміни барвника на лут
+  poison:
+    seconds: 8
+    level: 2
+
+item:
+  name: "&#39ff14&l☣ Кислотний Вівтар"
+  lore:
+    - "&7Постав на відкритому місці,"
+    - "&7щоб викликати івент."
+
+# Лут: у кожну скриню потрапляє per-chest предметів (мін, макс)
+loot:
+  per-chest: [5, 9]
+  items:
+    - { item: DIAMOND, min: 1, max: 3, weight: 10 }
+    - { item: EMERALD, min: 2, max: 6, weight: 14 }
+    - { item: GOLD_INGOT, min: 2, max: 8, weight: 16 }
+    - { item: IRON_INGOT, min: 3, max: 10, weight: 18 }
+    - { item: GOLDEN_APPLE, min: 1, max: 2, weight: 6 }
+    - { item: ENCHANTED_GOLDEN_APPLE, min: 1, max: 1, weight: 1 }
+    - { item: NETHERITE_INGOT, min: 1, max: 1, weight: 1 }
+    - { item: TOTEM_OF_UNDYING, min: 1, max: 1, weight: 1 }
+    - { item: EXPERIENCE_BOTTLE, min: 8, max: 24, weight: 10 }
+    - { item: ENDER_PEARL, min: 1, max: 4, weight: 8 }
+    - { item: SLIME_BALL, min: 4, max: 12, weight: 10 }
+    - { item: SPIDER_EYE, min: 2, max: 6, weight: 8 }
+    - { item: FERMENTED_SPIDER_EYE, min: 1, max: 3, weight: 5 }
+
+messages:
+  spawn: "&#39ff14&l☣ &#39ff14&l%player% &7заспавнив &#39ff14&lКислотний Вівтар &8(&f%x% %y% %z%&8)"
+  ready: "&#39ff14☣ &fВівтар з'явився! &7Натисни &fправою кнопкою &7на будь-яку скриню, щоб активувати."
+  activated: "&#39ff14☣ &fВівтар активовано гравцем &#39ff14&l%player%&f! Лут з'явиться через &#39ff14%seconds% с"
+  reveal: "&#39ff14☣ &fСкрині відкриваються! &7Спершу кислота, потім лут..."
+  open: "&#39ff14☣ &fЛут відкрито! Хто перший - той і забрав! &8(&f%x% %y% %z%&8)"
+  removed: "&#39ff14☣ &7Кислотний Вівтар розчинився..."
+  expired: "&#39ff14☣ &7Ніхто не активував вівтар, він розчинився..."
+  title-build: "&#39ff14&l☣ Кислотний Вівтар"
+  subtitle-build: "&7пробуджується..."
+  title-ready: "&#39ff14&l☣ Вівтар готовий"
+  subtitle-ready: "&7ПКМ по скрині, щоб активувати"
+  wait-build: "&cВівтар ще з'являється, зачекай."
+  wait-activation: "&#39ff14☣ &fВівтар уже активується: ще &#39ff14%seconds% с"
+  err-sky: "&cНад вівтарем має бути відкрите небо! Знайди місце просто неба."
+  err-space: "&cТут замало місця (потрібен рівний майданчик 7x7). Обери інше місце."
+  err-near: "&cЗанадто близько до іншого вівтаря."
+  err-container: "&cТут є скрині або інші контейнери, обери інше місце."
+  err-world: "&cВівтар можна ставити тільки у звичайному світі."
+  no-perm: "&cНемає прав."
+  given: "&#39ff14☣ &fВидано вівтар: &#39ff14%amount% шт. &fгравцю &#39ff14%player%"
+  bar-build: "&#39ff14☣ Вівтар з'являється..."
+  bar-ready: "&#39ff14☣ Натисни на скриню, щоб активувати"
+  bar-activating: "&#39ff14☣ Активація: &f%seconds% с"
+  bar-open: "&#39ff14☣ Вівтар зникне через &f%seconds% с"
